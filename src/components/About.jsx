@@ -1,3 +1,5 @@
+import Reveal from './Reveal'
+
 export default function About() {
   return (
     <section id="about" className="relative py-24 bg-gradient-to-b from-black to-slate-900 text-white">
@@ -13,11 +15,11 @@ export default function About() {
             <div className="absolute inset-0 grid place-items-center">
               <div className="h-48 w-48 rounded-full border border-cyan-400/40 shadow-[0_0_80px_10px_rgba(34,211,238,.25)] animate-spin-slow" />
               <div className="absolute h-32 w-32 rounded-full border border-purple-400/40 animate-spin-slower" />
-              <div className="absolute h-24 w-24 rounded-full border border-white/20" />
+              <div className="absolute h-24 w-24 rounded-full border border-white/20 animate-float" />
             </div>
           </div>
         </div>
-        <div>
+        <Reveal>
           <h2 className="text-3xl md:text-4xl font-bold">About Me</h2>
           <p className="mt-4 text-white/80">
             I'm an engineer specializing in AI, machine learning, and full‑stack development. I build data‑driven systems, deploy models to production, and craft delightful, immersive user experiences.
@@ -29,7 +31,7 @@ export default function About() {
               <li key={s} className="px-4 py-2 rounded-lg bg-white/5 border border-white/10">{s}</li>
             ))}
           </ul>
-        </div>
+        </Reveal>
       </div>
     </section>
   )

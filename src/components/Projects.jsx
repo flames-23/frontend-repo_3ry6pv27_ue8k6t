@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import Reveal from './Reveal'
 
 const SAMPLE_PROJECTS = [
   {
@@ -70,11 +71,15 @@ export default function Projects() {
   return (
     <section id="projects" className="py-24 bg-gradient-to-b from-slate-900 to-black text-white">
       <div className="max-w-7xl mx-auto px-6">
-        <h2 className="text-3xl md:text-4xl font-bold">Projects</h2>
-        <p className="mt-3 text-white/80 max-w-2xl">Selected AI/ML work spanning research prototypes to production systems.</p>
+        <Reveal>
+          <h2 className="text-3xl md:text-4xl font-bold">Projects</h2>
+          <p className="mt-3 text-white/80 max-w-2xl">Selected AI/ML work spanning research prototypes to production systems.</p>
+        </Reveal>
         <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {SAMPLE_PROJECTS.map((p) => (
-            <ProjectCard key={p.title} project={p} />
+            <Reveal key={p.title}>
+              <ProjectCard project={p} />
+            </Reveal>
           ))}
         </div>
       </div>
